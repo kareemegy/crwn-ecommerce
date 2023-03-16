@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
-import { UserContext } from "../../components/contexts/user.context";
+import { UserContext } from "../../contexts/user.context";
 import { signOutUser } from "../../utils/firebase/firebase";
 import "../navigation/navigation.styles.scss";
 const Navigation = () => {
@@ -20,7 +20,7 @@ const Navigation = () => {
           <Link className="nav-link" to="/shop">
             SHOP
           </Link>
-          {currentUser ? (
+           {currentUser ? (
             <span onClick={signOutUser} className="nav-link">
               Sign Out
             </span>
